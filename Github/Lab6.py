@@ -12,7 +12,11 @@ def encode():
         return "Invalid input, please enter an 8 digit password."
     print(encoded_res)
 def decode():
-    pass
+    decoded_res = ""
+    for char in encoded_password:
+        decoded_digits = (int(char) - 3) % 10
+        decoded_res += str(decoded_digits)
+    return decoded_res
 
 program_continue = True
 while program_continue:
@@ -23,7 +27,8 @@ while program_continue:
             encoded_password = encode()
             print(encoded_password)
         elif menu_selection == 2:
-            pass
+            decoded_password = decode()
+            print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}.")
         elif menu_selection == 3:
             program_continue = False
         else:
