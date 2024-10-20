@@ -20,12 +20,12 @@ def decode():
 
 program_continue = True
 while program_continue:
-    print("\nMenu\n1. Encode\n2. Decode\n3. Exit")
+    print("\nMenu\n-------------\n1. Encode\n2. Decode\n3. Quit\n")
     try:
         menu_selection = int(input("Select an option: "))
         if menu_selection == 1:
             encoded_password = encode()
-            print(encoded_password)
+            print("Your password has been encoded and stored!")
         elif menu_selection == 2:
             decoded_password = decode()
             print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}.")
