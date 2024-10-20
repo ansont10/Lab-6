@@ -1,3 +1,4 @@
+# Anson Tran
 def encode():
     user_input = input()
     encoded_res = ""
